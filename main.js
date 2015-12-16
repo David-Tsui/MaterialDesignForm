@@ -20,12 +20,10 @@ $(document).ready(function() {
     }
   });
 
-  $("#group1_6").click(function() { $("#place").val("總公司支援組"); });
+  $("#group1_6").click(function() { $("#place").val("總公司支援組").removeClass("invalid"); });
 
   $("#date-end").change(function() {
-    //console.log("end changed");
     var end_val = $(this).val();
-    //console.log("end_val: " + end_val);
     var start_val = $("#date-start").val();
     if (end_val != "" && start_val != "") {
       var start_date = generateDateObj(start_val), end_date = generateDateObj(end_val);
@@ -272,9 +270,11 @@ function checkForm() {
     first_error = "#place";
   }
 
-  $("body").animate({
-    scrollTop: $(first_error).offset().top - 50
-  }, 1000, 'easeOutExpo');
+  if (first_error != "") {
+    $("body").animate({
+      scrollTop: $(first_error).offset().top - 50
+    }, 1000, 'easeOutExpo');
+  }
 
   if (place_val == "" || name == "" || start_date == "" || end_date == "" || reason == "" || apply_type == "" || apply_way == "")
     return false;

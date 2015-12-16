@@ -59,6 +59,10 @@ input[type="text"], input[type="text"].valid {
 	margin-top: 16px;
 }
 
+input[type="text"].otherType {
+	margin-top: 3px;
+}
+
 [type="radio"]:checked+label:before, [type="radio"].with-gap:checked+label:before {
 	border-color: rgb(63, 81, 181) !important;
 }
