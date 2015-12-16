@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>請假表單</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link rel="stylesheet" href="bootstrap-material-datetimepicker.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="banner"></div>
+	<div class="container">
+		<div class="row" style="padding-top: 25px">
+			<div class="col s2">&nbsp;</div>
+			<div class="col s8">
+				<div class="row" id="formBox">
+			   	<div class="header">職員請假單</div>
+			   	<div class="emphasized" style="margin-top: 22px; font-size: 13px;">*必填</div>
+					<form class="form_group" id="group1">
+						<div class="formTitle">經銷商別<span class="emphasized"> *</span></div>
+						<p>
+	      	    <input class="with-gap" name="group1" type="radio" value="匯豐" id="group1_1" checked />
+	      	    <label for="group1_1">匯豐</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group1" type="radio" value="誠隆" id="group1_2" />
+	      	    <label for="group1_2">誠隆</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group1" type="radio" value="鼎隆" id="group1_3" />
+	      	    <label for="group1_3">鼎隆</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group1" type="radio" value="裕信" id="group1_4" />
+	      	    <label for="group1_4">裕信</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group1" type="radio" value="億和" id="group1_5" />
+	      	    <label for="group1_5">億和</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group1" type="radio" value="總公司支援組" id="group1_6" />
+	      	    <label for="group1_6">總公司支援組</label>
+	      	  </p>
+					</form>
+
+					<form class="form_group" id="group2">
+						<div class="input-field">
+							<div class="formTitle">廠別<span class="emphasized"> *</span></div>
+		          <input placeholder="您的回答" type="text" id="place" class="validate">
+		        </div>
+						<div class="input-field">
+							<div class="formTitle">職稱</div>
+						  <input placeholder="您的回答" type="text" id="position" class="validate">
+						</div>
+						<div class="input-field">
+							<div class="formTitle">姓名<span class="emphasized"> *</span></div>
+						  <input placeholder="您的回答" type="text" id="name" class="validate">
+						</div>						     
+					</form>
+
+					<form class="form_group" id="group3">		
+						<div class="input-field">
+	      			<div class="formTitle">起始日期<span class="emphasized"> *</span></div>
+		          <input placeholder="您的回答" type="text" id="date-start" class="validate">
+		        </div>
+						<div class="input-field">
+	      			<div class="formTitle">結束日期<span class="emphasized"> *</span></div>
+		          <input placeholder="您的回答" type="text" id="date-end" class="validate">
+		        </div>
+		        <div class="inline-input">
+		        	<div style="width: 45%">
+		        		<div class="input-field">
+		        			<div class="formTitle small">共計時數（自動產生）</div>
+		        		  <input placeholder="" type="text" id="total-hour" class="validate" disabled>
+		        		</div>
+		        	</div>
+			        <div style="width: 45%">
+			        	<div class="input-field">
+			        		<div class="formTitle small">換算天數（自動產生）</div>
+			        	  <input placeholder="" type="text" id="total-day" class="validate" disabled>
+			        	</div>
+			        </div>   
+		        </div>
+	      	</form>
+
+		      <form class="form_group" id="group4">
+						<div class="formTitle">假別<span class="emphasized"> *</span></div>
+						<p>
+	      	    <input class="with-gap" name="group4" type="radio" value="補休假(需三天前)" id="group4_1" checked />
+	      	    <label for="group4_1">補休假(需三天前)</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="事假(需三天前)" id="group4_2" />
+	      	    <label for="group4_2">事假(需三天前)</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="病假(需附醫院證明傳真回公司)" id="group4_3" />
+	      	    <label for="group4_3">病假(需附醫院證明傳真回公司)</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="公假" id="group4_4" />
+	      	    <label for="group4_4">公假</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="婚假(需七天前)" id="group4_5" />
+	      	    <label for="group4_5">婚假(需七天前)</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="陪產假(嬰兒出生證明)分娩當日及其前後15天內" id="group4_6" />
+	      	    <label for="group4_6">陪產假(嬰兒出生證明)分娩當日及其前後15天內</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group4" type="radio" value="喪假(需補證明)" id="group4_7" />
+	      	    <label for="group4_7">喪假(需補證明)</label>
+	      	  </p>
+	      	  <div style="position: relative; margin-top: 16px;">
+	      	    <input class="with-gap" name="group4" type="radio" value="其他" id="group4_8" />
+	      	    <label for="group4_8">其他</label>
+	            <div class="input-field" style="position: initial">
+	            	<input type="text" id="other-leave" class="validate otherType">
+	            </div>
+	      	  </div>
+	      	</form>
+
+	      	<form class="form_group" id="group5">
+						<div class="input-field">
+							<div class="formTitle">事由<span class="emphasized"> *</span></div>
+		          <input placeholder="您的回答" type="text" id="reason" class="validate">
+		        </div>
+		      </form>
+
+					<form class="form_group" id="group6">
+						<div class="formTitle">廠長核准<span class="emphasized"> *</span></div>
+						<p>
+	      	    <input class="with-gap" name="group6" type="radio" value="是" id="group6_1" checked />
+	      	    <label for="group6_1">是</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group6" type="radio" value="否" id="group6_2" />
+	      	    <label for="group6_2">否</label>
+	      	  </p>
+	      	</form>
+
+		      <form class="form_group" id="group7">
+						<div class="formTitle">請假方式<span class="emphasized"> *</span></div>
+	      	  <p>
+	      	    <input class="with-gap" name="group7" type="radio" value="傳真" id="group7_1" checked />
+	      	    <label for="group7_1">傳真</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group7" type="radio" value="line" id="group7_2" />
+	      	    <label for="group7_2">line</label>
+	      	  </p>
+						<p>
+	      	    <input class="with-gap" name="group7" type="radio" value="電話" id="group7_3"/>
+	      	    <label for="group7_3">電話</label>
+	      	  </p>
+	      	  <p>
+	      	    <input class="with-gap" name="group7" type="radio" value="口頭" id="group7_4" />
+	      	    <label for="group7_4">口頭</label>
+	      	  </p>
+	      	  <div style="position: relative; margin-top: 16px;">
+	      	    <input class="with-gap" name="group7" type="radio" value="其他" id="group7_5" />
+	      	    <label for="group7_5">其他</label>
+	      	    <div class="input-field" style="position: initial">
+	      	    	<input type="text" id="other-leave-way" class="validate otherType">
+	      	    </div>
+	      	  </div>
+	      	</form>
+
+	      	<form class="form_group" id="group8">
+						<div class="input-field">
+	      			<div class="formTitle">代理人員</div>
+		          <input placeholder="您的回答" type="text" id="proxy" class="validate">
+		        </div>
+	      	</form>
+					<br>
+	      	<button class="waves-effect waves-light blue darken-2 btn" id="submitBtn">提交</button>
+				</div>		
+			</div>
+			<div class="col s2">&nbsp;</div>	
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+	<script src="bootstrap-material-datetimepicker.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

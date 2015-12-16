@@ -1,0 +1,96 @@
+body {
+	background: #ede7f6;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	font-size: 2.25rem;
+}
+
+.emphasized {
+	color: #db4437;
+}
+
+.formTitle {
+	font-size: 1.38rem;
+}
+
+.formTitle.small {
+	font-size: 1rem;
+	font-style: italic;
+}
+
+.form_group:not(#group1):not(#group4):not(#group6):not(#group7) .formTitle {
+	margin-bottom: -14px;
+}
+
+.banner {
+	height: 278px;
+	background-color: rgb(63, 81, 181);
+	color: rgb(255, 255, 255);
+}
+
+#formBox {
+	background: white;
+	margin-top: -120px;
+	padding: 40px;
+	position: relative;
+}
+#formBox:before {
+	content: "";
+  background: rgb(140, 158, 255);
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.form_group:not(:first-child) {
+	margin-top: 36px;
+}
+
+.form-control-wrapper {
+	margin: 10px 20px;
+}
+
+input[type="text"], input[type="text"].valid {
+	border-bottom: 1px solid rgba(0,0,0,0.12);
+	box-shadow: none;
+	margin-top: 16px;
+}
+
+[type="radio"]:checked+label:before, [type="radio"].with-gap:checked+label:before {
+	border-color: rgb(63, 81, 181) !important;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+	border-color: rgb(63, 81, 181) !important;
+  background-color: rgb(63, 81, 181) !important;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid rgb(63, 81, 181);
+  box-shadow: none;
+}
+
+label {
+	color: black;
+}
+
+.otherType {
+	position: absolute;
+  width: 25% !important;
+  top: -12px;
+  left: 80px;
+}
+
+.inline-input {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*.input-field.invalid {
+	border-style: dashed;
+	border-color: red;
+	border-width: 2px;
+}*/
