@@ -33,8 +33,11 @@ body {
 #formBox {
 	background: white;
 	margin-top: -120px;
-	padding: 40px;
+	padding: 35px;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
 }
 #formBox:before {
 	content: "";
@@ -93,8 +96,22 @@ label {
 	justify-content: space-between;
 }
 
-/*.input-field.invalid {
-	border-style: dashed;
-	border-color: red;
-	border-width: 2px;
-}*/
+@media only screen and (max-width: 768px) {
+  #formBox {
+  	width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+	#formBox {
+  	width: 94%;
+  }
+  .banner {
+  	height: 122px;
+  }
+  #formBox {
+  	margin-top: -70px;
+  }
+}
+
+
