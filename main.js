@@ -1,8 +1,13 @@
 $(document).ready(function() {
 	$("form").submit(function() { return false; });
-	$('#date-end').bootstrapMaterialDatePicker({ weekStart: 0, format: 'YYYY/MM/DD HH:mm'});
-	$('#date-start').bootstrapMaterialDatePicker({ weekStart: 0, format: 'YYYY/MM/DD HH:mm'})
-		.on('change', function(e, date) {
+	$('#date-start, #date-end').bootstrapMaterialDatePicker({
+    weekStart: 0, 
+    format: 'YYYY/MM/DD HH:mm',
+    cancelText: "取消",
+    okText: "送出",
+    lang: "zh_TW"
+  });
+	$('#date-start').on('change', function(e, date) {
 		$('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
 	});
 

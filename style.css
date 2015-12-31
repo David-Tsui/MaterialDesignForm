@@ -96,6 +96,10 @@ label {
 	justify-content: space-between;
 }
 
+.dtp .p10 > a {
+  color: #FFFFFF;
+}
+
 @media only screen and (max-width: 768px) {
   #formBox {
   	width: 100%;
